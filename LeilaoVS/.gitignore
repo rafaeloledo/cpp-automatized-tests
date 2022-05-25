@@ -4,4 +4,4 @@ Leilao.sln
 x64
 LeilaoVS/x64
 LeilaoVS/*.vcxproj
-LeilaoVS/*.vcxproj.*'
+LeilaoVS/*.vcxproj.*

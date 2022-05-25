@@ -1,18 +1,21 @@
 #ifndef Leilao_hpp
 #define Leilao_hpp
+
 #include <vector>
 #include <string>
 #include "Lance.hpp"
 
 class Leilao
 {
-private:
-    std::vector<Lance> lances;
-    std::string descricao;
-public:
-    Leilao(std::string descricao);
-    const std::vector<Lance>& recuperaLances() const;
-    void recebeLance(const Lance& lance);
+    private:
+        std::vector<Lance> lances;
+        std::string descricao;
+    public:
+        Leilao(std::string descricao);
+        const std::vector<Lance>& recuperaLances() const;
+        void recebeLance(const Lance& lance);
+    private:
+        bool usuariosDiferentes(const Lance& lanceAtual);
 };
 
 #endif /* Leilao_hpp */

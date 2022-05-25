@@ -8,3 +8,8 @@ std::string Usuario::recuperaNome() const
 {
     return nome;
 }
+
+std::string Usuario::getPrimeiroNome() const
+{
+    return nome.substr(0, nome.find(' '));
+} 

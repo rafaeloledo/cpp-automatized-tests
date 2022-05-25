@@ -1,4 +1,3 @@
-#define CATCH_CONFIG_MAIN
 #include "catch.hpp"
 
 #include "Avaliador.hpp"
@@ -29,8 +28,8 @@ Leilao emOrdemDecrescente()
 }
 
 TEST_CASE("Avaliador") {
-    
-    Avaliador leiloeiro;
+
+    Avaliador avaliador;
 
     SECTION("Leilões ordenados") {
         Leilao leilao = GENERATE(emOrdemCrescente(), emOrdemDecrescente());
@@ -38,16 +37,16 @@ TEST_CASE("Avaliador") {
 
         SECTION("Deve recuperar maior lance de leilão")
         {
-            leiloeiro.avalia(leilao);
+            avaliador.avalia(leilao);
 
-            REQUIRE(2000 == leiloeiro.getMaiorValor());
+            REQUIRE(2000 == avaliador.getMaiorValor());
         }
 
         SECTION("Deve recuperar menor lance de leilão")
         {
-            leiloeiro.avalia(leilao);
+            avaliador.avalia(leilao);
 
-            REQUIRE(1000 == leiloeiro.getMenorValor());
+            REQUIRE(1000 == avaliador.getMenorValor());
         }
     }
     SECTION("Deve recuperar os três maiores lances")
@@ -63,14 +62,12 @@ TEST_CASE("Avaliador") {
         leilao.recebeLance(terceiroLance);
         leilao.recebeLance(quartoLance);
 
-        leiloeiro.avalia(leilao);
+        avaliador.avalia(leilao);
 
-        auto maiores3Lances = leiloeiro.get3MaioresLances();
+        auto maiores3Lances = avaliador.get3MaioresLances();
         REQUIRE(3 == maiores3Lances.size());
         REQUIRE(2500 == maiores3Lances[0].recuperaValor());
         REQUIRE(2000 == maiores3Lances[1].recuperaValor());
         REQUIRE(1500 == maiores3Lances[2].recuperaValor());
     }
 }
-
-

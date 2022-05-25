@@ -10,7 +10,6 @@ class Avaliador
         std::vector<Lance> maiores3Lances;
         static bool comparaLances(const Lance&, const Lance&);
     public:
-        Avaliador();
         void avalia(Leilao);
         float getMaiorValor() const;
         float getMenorValor() const;

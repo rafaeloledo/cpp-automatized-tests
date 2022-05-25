@@ -2,9 +2,6 @@
 #include <algorithm>
 #include <iostream>
 
-Avaliador::Avaliador() {
-    std::cout << "Criando um novo avaliador" << std::endl;
-}
 
 void Avaliador::avalia(Leilao leilao)
 {

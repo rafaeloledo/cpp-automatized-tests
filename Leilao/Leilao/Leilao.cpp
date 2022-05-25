@@ -10,7 +10,14 @@ const std::vector<Lance>& Leilao::recuperaLances() const
     return lances;
 }
 
-void Leilao::recebeLance(const Lance& lance)
-{
-    lances.push_back(lance);
+bool Leilao::usuariosDiferentes(const Lance& lance) {
+    return lances.back().getNomeUsuario() != lance.getNomeUsuario();
 }
+
+void Leilao::recebeLance(const Lance& lanceAtual)
+{
+    if (lances.size() == 0 || usuariosDiferentes(lanceAtual)) {
+        lances.push_back(lanceAtual);
+    }
+}
+

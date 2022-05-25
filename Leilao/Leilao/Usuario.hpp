@@ -5,11 +5,11 @@
 class Usuario
 {
 private:
-    std::string nome;
+	std::string nome;
 public:
-    Usuario(std::string);
-    std::string recuperaNome() const;
-    std::string getPrimeiroNome() const;
+	Usuario(std::string);
+	std::string recuperaNome() const;
+	std::string getPrimeiroNome() const;
 };
 
 #endif /* Usuario_hpp */

@@ -6,13 +6,13 @@
 
 class Lance
 {
-    private:
-        Usuario usuario;
-        float valor;
-    public:
-        Lance(Usuario usuario, float valor);
-        float recuperaValor() const;
-        std::string getNomeUsuario() const;
+private:
+	Usuario usuario;
+	float valor;
+public:
+	Lance(Usuario usuario, float valor);
+	float recuperaValor() const;
+	std::string getNomeUsuario() const;
 };
 
 #endif /* Lance_hpp */

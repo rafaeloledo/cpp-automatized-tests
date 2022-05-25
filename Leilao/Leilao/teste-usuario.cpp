@@ -3,9 +3,9 @@
 
 
 TEST_CASE("Usuário deve saber informar seu primeiro nome") {
-    Usuario rafael("Rafael Ledo");
+	Usuario rafael("Rafael Ledo");
 
-    std::string primeiroNome = rafael.getPrimeiroNome();
+	std::string primeiroNome = rafael.getPrimeiroNome();
 
-    REQUIRE("Rafael" == primeiroNome);
+	REQUIRE("Rafael" == primeiroNome);
 }

@@ -7,15 +7,15 @@
 
 class Leilao
 {
-    private:
-        std::vector<Lance> lances;
-        std::string descricao;
-    public:
-        Leilao(std::string descricao);
-        const std::vector<Lance>& recuperaLances() const;
-        void recebeLance(const Lance& lance);
-    private:
-        bool usuariosDiferentes(const Lance& lanceAtual);
+private:
+	std::vector<Lance> lances;
+	std::string descricao;
+public:
+	Leilao(std::string descricao);
+	const std::vector<Lance>& recuperaLances() const;
+	void recebeLance(const Lance& lance);
+private:
+	bool usuariosDiferentes(const Lance& lanceAtual);
 };
 
 #endif /* Leilao_hpp */

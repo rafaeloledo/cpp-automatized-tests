@@ -1,7 +1,6 @@
-Leilao.sln
 .vs
 .vscode
+*.sln
 x64
-LeilaoVS/x64
-LeilaoVS/*.vcxproj
-LeilaoVS/*.vcxproj.*
+/Leilao/*.vcxproj
+/Leilao/*.vcxproj.*

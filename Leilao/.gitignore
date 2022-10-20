@@ -1,7 +1,0 @@
-catch.hpp
-.vs
-.vscode
-*.sln
-x64
-/Leilao/*.vcxproj
-/Leilao/*.vcxproj.*
